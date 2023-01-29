@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const {signup, verifyEmailSignup, login, logout, forgetpassword, resetpassword, getLoggedInUserDetails, adminalluser, admingetsingleuser, adminupdatesingleuser, admindeletesingleuser, updatesingleuser, deleteSingleUser, changepassword} =require('../controller/userController')
+const {signup, verifyEmailSignup, login, logout, forgetpassword, resetpassword, getLoggedInUserDetails, adminalluser, admingetsingleuser, adminupdatesingleuser, admindeletesingleuser, updatesingleuser, deleteSingleUser, changepassword, getSingleUserPublic} =require('../controller/userController')
 const {isLoggedIn,customRole, validatingPassword} =require('../middleware/user')
 
 //USER API
@@ -15,6 +15,7 @@ router.route('/userdashboard').get(isLoggedIn,getLoggedInUserDetails)
 router.route('/userdashboard').put(isLoggedIn,updatesingleuser)
 router.route('/userdashboard').delete(isLoggedIn,deleteSingleUser)
 router.route('/userdashboard/updatePassword').post(isLoggedIn,changepassword)
+router.route('/user/:id').get(getSingleUserPublic)
 
 //ADMIN API
 router.route('/admin/users').get(isLoggedIn,customRole("admin"),adminalluser)

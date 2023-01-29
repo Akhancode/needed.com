@@ -1,0 +1,23 @@
+.Container{
+    height: 80%;
+    margin-top: 75px;
+    display: flex;
+    
+}
+.viewContainer{
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* border: solid; */
+    align-items: center;
+    justify-content: center;
+    /* height: 400px; */
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction : row;
+    overflow-y:scroll;
+    padding: 20px;
+    align-self: center;
+    
+}

@@ -18,7 +18,7 @@ const buyerAdSchema = new mongoose.Schema({
     },
     description:{
         type:String,
-        maxlength:[200,'Name should be under 50 characters'],
+        maxlength:[1000,'Name should be under 1000 characters'],
         required:[true,'Please provide a description'],
     },
     photos:[
@@ -41,9 +41,7 @@ const buyerAdSchema = new mongoose.Schema({
         type:String,
         required:[true,'Select any category from given Category '],
         enum:{
-            values:[
-                "Computer Equipment" , "Automobile" , "Electronics", "other"
-            ],
+            values:['Mobiles', 'beauty products', 'bikes', 'furniture', 'Pets', 'Books & Hobbies', 'Sports ', 'Electronics & Appliances', 'Properties', 'Services', 'Mobiles', 'beauty products', 'bikes', 'furniture', 'Pets', 'Books & Hobbies', 'Sports ', 'Electronics & Appliances', 'Properties', 'Services', 'Mobiles', 'beauty products', 'bikes', 'furniture', 'Pets', 'Books & Hobbies', 'Sports ', 'Electronics & Appliances', 'Properties', 'Services', 'Mobiles', 'beauty products', 'bikes', 'furniture', 'Pets', 'Books & Hobbies', 'Sports ', 'Electronics & Appliances', 'Properties', 'Services'],
             message:"Select any category from category list"
         }
 

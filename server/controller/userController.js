@@ -12,7 +12,7 @@ const bcrypt = require('bcryptjs')
 
 exports.signup = BigPromise(async(req,res,next)=>{
     let result
-    const {name,email,password} = await req.body
+    const {name,email,password,contact} = await req.body
 
     if(!email){
          // return next(Error("please fill email"))
@@ -41,6 +41,7 @@ exports.signup = BigPromise(async(req,res,next)=>{
           name,
           email,
           password,
+          contact,
           photo:req.files?{
                id:result.public_id ,
                secure_url:result.secure_url
@@ -256,6 +257,20 @@ exports.adminalluser = BigPromise(async (req,res,next)=>{
     res.status(200).json({
      success:true,
      user
+    })
+})
+ exports.getSingleUserPublic = BigPromise(async (req,res,next)=>{
+     
+    const user = await User.findById(req.params.id)
+     if(!user){
+          return next(new CustomError("No user Found in this ID",401))
+     }
+    res.status(200).json({
+     success:true,
+     user:{
+          "name":user.name,
+          "role":user.role
+     }
     })
 })
 

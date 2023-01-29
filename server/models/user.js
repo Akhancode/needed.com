@@ -18,6 +18,11 @@ const userSchema  = new mongoose.Schema({
         validate: [validator.isEmail,'Please Enter email in format'],
         unique:true
           },
+    contact:{
+        type:Number,
+        required:[true,'Please provide a phone number'],
+        unique:true
+          },
     password:{
         type:String,
         required:[false,'Please provide a password'],

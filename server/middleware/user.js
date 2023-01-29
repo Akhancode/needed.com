@@ -7,9 +7,10 @@ const CustomError = require('../utils/customError');
 
 
 exports.isLoggedIn = BigPromise(async (req,res,next)=>{
+    console.log(req.cookies)
     //FETCHING FROM COOKIES OR HEADER
     if(await !req.cookies?.token && await !req.header("Authorization")){
-   
+            
         return next(new CustomError("login failed NO TOKEN provided"))
     }
     const token  = req.cookies.token || req.header("Authorization").replace("Bearer ","");

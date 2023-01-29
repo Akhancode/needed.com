@@ -1,0 +1,132 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+    .tileContainer{
+        position:absolute;
+        top:100px;
+        // border:solid;
+        // height: 100%;
+        width: 65vw;
+        height:  calc(100% - 140px);
+        display: flex;
+        flex-direction: row;
+
+        
+        background: #FFFFFF;
+        box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.25);
+        border-radius: 13px;
+        .left{
+            
+            flex: 6;
+            border-radius: 13px 0 0 13px;
+            background: #EAECEC;
+            box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .iconContainer{
+                display: flex;
+                width: 60%;
+                justify-content: flex-start;
+                height: 2rem;
+                margin: 10px;
+            }
+            .form{
+                margin-top: 30px;
+                // border: solid;
+                height: 50%;
+                .errorSpace{
+                    height: 1rem;
+                    
+                }
+                .input{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }   
+                 
+                input{
+                    /* Form Field */
+
+
+                        box-sizing: border-box;
+
+                        /* Auto layout */
+
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        padding: 12px 16px;
+                        gap: 12px;
+
+                        width: 320px;
+                        height: 48px;
+
+                        /* White */
+
+                        background: #FFFFFF;
+                        /* Lined Gray */
+
+                        border: 1px solid #C6C6C6;
+                        border-radius: 4px;
+
+                        /* Inside auto layout */
+
+                        flex: none;
+                        order: 1;
+                        align-self: stretch;
+                        flex-grow: 0;
+
+                        &:focus{
+                            background-color: white;
+                        }
+                }
+                .signin{
+                    display: flex;
+                    // flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: start;
+                    
+                }
+                button{
+                                    
+                background: #EB6440;
+                box-shadow: 0px 5.46154px 6.45455px rgba(0, 0, 0, 0.25), inset 0.496504px -1.48951px 3.47552px rgba(0, 0, 0, 0.25);
+                border-radius: 12.4126px;
+                height: 2rem;
+                width: 6rem;
+                border: none;
+                color: white;
+                position: absolute;
+                left: 7rem;
+                }
+            }
+        }
+        .right{
+            flex:5;
+            background-color: #FFFFFF;
+            border-radius: 0 13px 13px 0;
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 100%;
+                height: calc(50%);
+                object-fit: contain;
+            }
+        }
+
+    }
+   
+
+    
+}

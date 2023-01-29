@@ -1,0 +1,107 @@
+
+.ItemContainer{
+    border: solid;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+    
+}
+.imageContainer{
+    border: solid blue;
+    height: 94%;
+    flex: 3;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ItemDetailContainer{
+    border: solid blue;
+    height: 94%;
+    margin: 20px;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}
+.itemImage{
+    object-fit: cover;
+    /* height: inherit; */
+}
+.buyerImage{
+    object-fit: cover;
+    height: inherit;
+}
+.ItemDetailContainer > table{
+    margin-left: 50px;
+    flex: 5;
+    border: solid;
+    padding: 20px;
+    border-spacing: 10px;
+    
+}
+.ItemDetailContainer > *{
+    font-size: 22px;
+    /* border: solid; */
+    height: 60%;
+    width: 80%;
+    margin: 50px;
+
+}
+.heading{
+    font-size: 32px;
+}
+.buyerInfoContainer{
+    border: solid;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 20%;
+    
+    
+}
+
+.logoContainer{
+    /* border: solid; */
+    flex: 2;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.buyerlogo{
+    border: solid;
+    height: 100px;
+    width:100px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.buyerDetails{
+    flex:3;
+    border:solid;
+    margin: 10px;
+    font-size: small;
+    height: 80%;
+    overflow-y: scroll;
+    align-self: center;
+}
+.body{
+    overflow-x: hidden;
+
+}
+.td_button{
+    display: flex;
+    align-items: centers;
+    justify-content: center;
+}
+.sellOrder{
+    border: solid;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: red;
+    
+}

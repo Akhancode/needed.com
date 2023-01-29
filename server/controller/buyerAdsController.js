@@ -11,32 +11,40 @@ exports.createBuyerAd = BigPromise( async  (req,res,next)=>{
     //IMAGE UPLOADING TO CLOUDINARY
     let imageArray = []
     var BuyerAd 
-    
+    console.log(await req.files.photos.length)
     if(!req.files){
       return next(new CustomError("Images are required"))
     }
     if(req.files){
+      
       for (let index = 0; index < req.files.photos.length; index++) {
-        
-        let result = await cloudinary.v2.uploader.upload(req.files.photos[index].tempFilePath,{
-          folder:"ineed/buyerAds"
-        })
-
-        imageArray.push({
-            id:result.public_id,
-            secure_url : result.secure_url
+        try {
+          let result = await cloudinary.v2.uploader.upload(req.files.photos[index].tempFilePath,{
+            folder:`ineed/buyerAds/${req.user.email}_${req.user.id}`
           })
+          
+          imageArray.push({
+              id:result.public_id,
+              secure_url : result.secure_url
+            })
+          
+        } catch (error) {
+          console.log("Error Adding to cloudinary")
+          console.log(error)
+        }
         }
       }
     //   IF ANYTHING ERROR HAPPENS AFTER UPLOADING PHOTO
       try{
           req.body.photos = imageArray
           req.body.user = req.user.id
-          
+          console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
           //DATA OF PRODUCT
           BuyerAd = await BuyerAds.create(req.body)
-        }catch{
+
+        }catch(error){
             console.log(" deleting from cloudinary")
+            console.log(error)
             for (let index = 0; index < imageArray.length; index++) {
                 
                 //destroy existing images
@@ -47,6 +55,7 @@ exports.createBuyerAd = BigPromise( async  (req,res,next)=>{
             return next(new CustomError("Error in Creating New Ads Please check information Entered !",401))
         }
           
+      console.log("success created AD")
       
       //const db = await something
       res.status(200).json({
@@ -205,8 +214,7 @@ exports.getSingleUserMyAds = BigPromise( async  (req,res,next)=>{
       //   search_result:filteredProductNumber,
       })
     })
-
-
+    
 //PUBLIC
 exports.getAllAds = BigPromise(async (req,res,next)=>{
       

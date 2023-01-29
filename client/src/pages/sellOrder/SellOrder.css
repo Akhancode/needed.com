@@ -1,0 +1,95 @@
+.body{
+    
+    top: 120px;
+    position: fixed;
+    height: 83vh;
+    width: 100vw;
+    display: flex;
+    
+    
+}
+.containerSellOrder{
+    width: 100%;
+    border: solid;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+table{
+    border: solid;
+    width: 90%;
+    border-spacing: 10px;
+}
+
+.buyerDetails{
+    height: 100px;
+    overflow: hidden;
+}
+.td_button{
+ 
+    /* border: solid; */
+    width: 100%;
+    margin-left: 100px;
+}
+.buyerImage{
+    object-fit: contain;
+    height: 10px;
+}
+.buyerlogo{
+    border: solid;
+    height: 100px;
+    width:100px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.logoContainer{
+    /* border: solid; */
+    flex: 2;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.leftOrder{
+    /* border: solid; */
+    flex: 1;
+    height: 80%;
+}
+.rightOrder{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.formContainer{
+    margin: 20px;
+    height: 80%;
+    width: 60%;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+s
+form{
+    border: blueviolet;
+}
+.textArea{
+    max-height: 100px;
+    max-width: 300px;
+    min-width: 200px;
+    min-height: 70px;
+}
+.table_order{
+    padding:20px;
+    width: 300px;
+    
+}
+.loginALert{
+    cursor: pointer;
+}
