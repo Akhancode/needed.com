@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import './Item.css'
+import './Item.scss'
 import Topbar from '../../components/topbar/Topbar'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
@@ -20,7 +20,7 @@ const Item = (props) => {
 
 
     const location = useLocation()
-    console.log(location.state.item)
+    // console.log(location.state)
      const { item } = location.state
      const [postOwnerData,setPostOwnerData ] = useState({})
      const [itemData,setitemData ] = useState({})
@@ -86,8 +86,15 @@ const Item = (props) => {
                         </Link>
                     </td>
                 </tr>
+                <tr>
+       
+
+                </tr>
             </table>
-            <div className="buyerInfoContainer">
+            <table>
+
+                <tr>
+                                <div className="buyerInfoContainer">
                     <div className="logoContainer">
 
                         <div className="buyerlogo">
@@ -100,10 +107,15 @@ const Item = (props) => {
                         <li>Buyer role  :  {postOwnerData?.role}</li>
                     </ul>
                     </div>
-            </div>
+                    </div>
+                </tr>
+              
+                
+            </table>
+            
         </div>
         
-    </div>
+      </div>
     
   </div>
     

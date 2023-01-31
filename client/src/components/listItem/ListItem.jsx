@@ -45,32 +45,7 @@ const ListItem = (props) => {
                     <div className="date">{format(new Date(createdAt), 'yyyy/MM/dd')}</div>
                 </div>
               
-                {/* <div className="topContainer">
-                    <div className="priceContainer">
-                    <h3>${fromPrice}</h3>
-                    &nbsp;&nbsp; 
-                    <h3 >-</h3>
-                    &nbsp;&nbsp; 
-                    <h3>${toPrice}</h3>
-                    </div>{
-                       ( user?._id == props.state.item.user) ?<Link  to='/item' style={{color:'orange',borderColor:'orange'}} state={{item:props.state.item}}
-                        className="buyBtn">Edit</Link>
-                        :<Link  to='/item' state={{item:props.state.item}}
-                        className="buyBtn">Sell</Link>
-                          }
-                    
-                </div>
-                <div className="detailsContainer">
-                    <div className="leftDetail">
-                        <label htmlFor="">Name : <label htmlFor="">{name}</label></label>
-                        <label htmlFor="">Place : <label htmlFor="">{place}</label></label>
-                        <label htmlFor="">Category : <label htmlFor="">{category}</label></label>
-                    </div>
-                    <div className="rightDetail">
-                        <label htmlFor="">Description : <label htmlFor="" className='description'>{description}</label></label>
-                        
-                    </div>
-                </div>     */}
+     
             </div>        
         </div>
    
