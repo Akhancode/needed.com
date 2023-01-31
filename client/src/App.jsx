@@ -15,6 +15,7 @@ import Signin from './pages/signin/Signin';
 import { UserContext } from './Context';
 import Carousal from './components/carousal/Carousal';
 import MyPostList from './pages/mypostsList/MyPostList';
+import UpdateAd from './pages/updateAd/UpdateAd';
 
 function App() {
   const {authorised,setAuthorised,user,setUser} = useContext(UserContext)
@@ -34,6 +35,7 @@ function App() {
               <Route path='/postAd/buy' element={<PostAd />}/>
               <Route path='/sell/order' element={<SellOrder/>}/>
               <Route path='/myposts' element={<MyPostList/>}/>
+              <Route path='/myposts/update' element={<UpdateAd/>}/>
           </Routes>
        {/* </div> */}
     </div>

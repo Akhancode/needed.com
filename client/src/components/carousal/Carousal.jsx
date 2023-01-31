@@ -35,7 +35,7 @@ const Carousal = ({photos,isThumbnail}) => {
     >
     {
         photos.map((item)=>{
-                console.log(item)
+                // console.log(item)
             return(
                 <div style={{width:'inherit',maxHeight:'100%',display:'flex',justifyContent:'center'}}>
                     <img src={item.secure_url} style={{maxHeight:'260px',width:'100%',objectFit:'contain'}} />  
