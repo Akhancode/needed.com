@@ -33,7 +33,8 @@ const Topbar = () => {
       <div className="left">
       <Link to='/' className='link'>
         <div className="logo">
-          <img src={process.env.PUBLIC_URL + '/topbar/Needed.svg'} style={{height:'100%'}}/>
+          {/* <img src={process.env.PUBLIC_URL + '/topbar/Needed.svg'} style={{height:'100%'}}/> */}
+          <h1>Needed.com</h1>
         </div>
       </Link>
       </div>
