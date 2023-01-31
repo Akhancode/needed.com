@@ -1,0 +1,116 @@
+.body {
+  overflow-x: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 75px;
+  height: 100vh;
+
+  .ItemContainer {
+    background-color: white;
+    padding-left: 10%;
+    // border: solid;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0px;
+
+    .imageContainer {
+      background-color: rgba(231, 231, 231, 0.9);
+      box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.35);
+      height: 90%;
+      flex: 3;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ItemDetailContainer {
+      height: 100%;
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;  
+      overflow: scroll;
+
+      table {
+        border: none;
+        margin: 0.5rem;
+        flex: 5;
+        padding: 20px;
+        border-spacing: 10px;
+        background-color: rgba(231, 231, 231, 0.9);
+        box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.35);
+        position: relative;
+        .buyerInfoContainer {
+          border: solid;
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
+
+.itemImage {
+  object-fit: cover;
+  /* height: inherit; */
+}
+.buyerImage {
+  object-fit: cover;
+  height: inherit;
+}
+.ItemDetailContainer > * {
+  font-size: 22px;
+  /* border: solid; */
+  height: 60%;
+  width: 80%;
+  margin: 50px;
+}
+.heading {
+  font-size: 32px;
+}
+
+.logoContainer {
+  /* border: solid; */
+  flex: 2;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buyerlogo {
+  border: solid;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 50%;
+}
+.buyerDetails {
+  flex: 3;
+  border: solid;
+  margin: 10px;
+  font-size: small;
+  height: 80%;
+  overflow-y: scroll;
+  align-self: center;
+}
+.td_button {
+  display: flex;
+  align-items: centers;
+  justify-content: center;
+}
+.sellOrder {
+  border: solid;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: red;
+}

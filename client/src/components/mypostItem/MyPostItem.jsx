@@ -9,7 +9,6 @@ import RoomIcon from '@mui/icons-material/Room';
 const MyPostItem = ({ad}) => {
     console.log(ad)
   return (
-       
         <div className="itemContainer">
         <div className="leftItems">
                 <Carousal photos={ad.photos} isThumbnail={false}/>
